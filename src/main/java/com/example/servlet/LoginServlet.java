@@ -32,7 +32,6 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Users usersLst = Users.getInstance();
-
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         if (login != null && password != null && !login.equals("") && !password.equals("")) {
@@ -46,7 +45,9 @@ public class LoginServlet extends HttpServlet {
             } else {
                 req.getRequestDispatcher("/login.jsp").forward(req, resp);
             }
+        } else {
+            req.getRequestDispatcher("/login.jsp").forward(req, resp);
+            
         }
-
     }
 }
