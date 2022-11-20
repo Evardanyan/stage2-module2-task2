@@ -1,4 +1,4 @@
-package com.example.filter;
+package com.example.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebListener;
